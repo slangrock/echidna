@@ -34,52 +34,83 @@
           <h1>
 <a id="echidna" class="anchor" href="#echidna" aria-hidden="true"><span class="octicon octicon-link"></span></a>echidna</h1>
 
-<p>A limit setting and spectrum fitting tool.</p>
+<p>echidna is a limit setting and spectrum fitting tool. It aims to create a fast flexible platform providing the tools for a variety of limit-setting and fitting based analyses.</p>
 
 <h2>
-<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
+<a id="getting-started-with-echidna" class="anchor" href="#getting-started-with-echidna" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting started with echidna</h2>
 
-<p>Sphinx based documentation is available in the <code>docs</code> directory. To build HTML documentation,</p>
+<p>Whether you want to contribute to development or just use the latest release, this is the place to start.</p>
 
-<pre><code>cd docs
-make html
-</code></pre>
+<h2>
+<a id="downloading-echidna" class="anchor" href="#downloading-echidna" aria-hidden="true"><span class="octicon octicon-link"></span></a>Downloading echidna</h2>
 
-<p>Output is placed in <code>doc/_build/html</code>.
-This documentation is built using the napoleon extension to sphinx, which allows the google style comments.</p>
+<p>If you just want the latest release, there are two main options:</p>
 
-<p>Note: After updating code be sure to run in the base directory</p>
+<ul>
+<li>
+<a href="https://github.com/snoplusuk/echidna/releases/latest">download</a> the latest release from GitHub</li>
+<li>
+<p>Clone the repository from the command line</p>
 
-<pre><code>sphinx-apidoc -f -H echidna -o docs echidna/
-cd docs
-make html
+<p>$ git clone -b "v0.1-alpha" <a href="mailto:git@github.com">git@github.com</a>:snoplusuk/echidna.git</p>
+</li>
+</ul>
+
+<p>However if you plan on developing echidna, the best option is to fork the main
+echidna repository and then clone your fork</p>
+
+<pre><code>$ git clone git@github.com:yourusername/echidna.git
 </code></pre>
 
 <h2>
 <a id="software-requirements" class="anchor" href="#software-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software Requirements</h2>
 
-<p>The software and corresponding version numbers required to run echidna are listed in requirements.txt. To install all packages using pip run</p>
+<p>In order run echidna some extra python modules are required. The software and corresponding version numbers required listed in requirements.txt. To install all packages using pip run</p>
 
-<pre><code>sudo pip install -r requirements.txt
+<pre><code>$ pip install -r requirements.txt
 </code></pre>
+
+<p>Note: you may need root access to install some modules.</p>
 
 <h2>
 <a id="running-echidna" class="anchor" href="#running-echidna" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running echidna</h2>
 
-<p>Example scripts are located in the echidna/scripts/ folder. To run example scripts you must set your python path to</p>
+<p>You should now have a working copy of echidna. You can get started straight away by using some of the example scripts. Example scripts are located in <code>echidna/scripts/</code>. To run example scripts you must set your python path to</p>
 
-<pre><code>export PYTHONPATH=$PYTHONPATH:$(pwd)
+<pre><code>$ export PYTHONPATH=$PYTHONPATH:$(pwd)
 </code></pre>
 
 <p>from the echidna base directory. Details on how to run individual scripts can be found in their respective documentation.</p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>A copy of the latest version of the HTML documentation is available <a href="echidna/blob/gh-pages/docs/html/docs/index.html">here</a></p>
+
+<p>But if you prefer you can build a copy of the Sphinx-based documentation locally. To build HTML documentation:</p>
+
+<pre><code>$ cd docs
+$ make html
+</code></pre>
+
+<p>Output is placed in <code>docs/html/docs</code>. This documentation is built using the napoleon extension to sphinx, which allows the google style comments.</p>
+
+<p>Note: After updating code be sure to run in the base directory</p>
+
+<pre><code>$ sphinx-apidoc -f -H echidna -o docs echidna/
+$ cd docs
+$ make html
+</code></pre>
 
 <h2>
 <a id="testing" class="anchor" href="#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h2>
 
 <p>To test the code is working as expected run</p>
 
-<pre><code>python -m unittest discover echidna/test/
+<pre><code>$ python -m unittest discover echidna/test/
 </code></pre>
+
+<p>from the base directory.</p>
         </section>
 
         <footer>
